@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdbool.h>
+char s[1123];
+int main()
+{
+    scanf("%s",s);
+
+    int len=0;
+    while(s[len]!='\0')
+    {
+        len++;
+    }
+
+    int n=len-1;
+    bool ans;
+
+
+    for(int i=0, j=n; i<(n/2); i++, j--)
+    {
+        if(s[i]!=s[j])
+        {
+            ans=false;
+            break;
+        }
+        else
+        {
+            ans=true;
+        }
+    }
+
+    if(ans)
+    {
+        printf("YES\n");
+    }
+    else
+    {
+        printf("NO\n");
+    }
+}
