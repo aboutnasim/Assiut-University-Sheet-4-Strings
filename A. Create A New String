@@ -1,0 +1,21 @@
+#include<stdio.h>
+const int mx=1000;
+char s[mx];
+char t[mx];
+int main()
+{
+    scanf("%s",s);
+    scanf("%s",t);
+    int len=0;
+    while(s[len]!='\0')
+    {
+        len++;
+    }
+    int len2=0;
+    while(t[len2]!='\0')
+    {
+        len2++;
+    }
+    printf("%d %d\n",len,len2);
+    printf("%s %s\n",s,t);
+}
