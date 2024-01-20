@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define endl "\n"
+#define mem(a,b) memset(a,b,sizeof(a))
+#define sqr(a) (a*a)
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fraction() cout.unsetf(ios::floatfield); cout.precision(10); cout.setf(ios::fixed,ios::floatfield);
+
+
+int main()
+{
+    optimize();
+
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        string s,t;
+        cin>>s >>t;
+        int n= s.size();
+        int m= t.size();
+
+
+        int mn=min(n,m);
+
+        for(int i=0; i<mn; i++)
+        {
+            cout<<s[i]<<t[i];
+        }
+
+        if(n>m)
+        {
+            for(int i=mn; i<n; i++)
+                cout<<s[i];
+        }
+        else
+        {
+            for(int i=mn; i<m; i++)
+            {
+                cout<< t[i];
+            }
+        }
+        cout<< endl;
+    }
+
+    return 0;
+}
